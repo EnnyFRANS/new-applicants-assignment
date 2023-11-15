@@ -7,35 +7,34 @@
         <title>Calculator</title>
     </head>
     <body>
-        <!--test push to github-->
         <div class="container">
-            <input type="text" class="display" />
+            <input type="text" id="display" class="display" readonly/>
             <!-- Add your classes or ids -->
             <div class="buttons">
-                <button>AC</button>
-                <button>DEL</button>
-                <button>%</button>
-                <button>/</button>
+                <button onclick="clearDisplay()" class="op">AC</button>
+                <button onclick="deleteLastCharacter()" class="op">DEL</button>
+                <button onclick="appendToDisplay('%')" class="op">%</button>
+                <button onclick="appendToDisplay('/')" class="op">/</button>
 
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>*</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('*')" class="op">*</button>
 
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>-</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('-')" class="op">-</button>
 
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>+</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('+')" class="op">+</button>
 
-                <button>0</button>
-                <button>00</button>
-                <button>.</button>
-                <button></button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('00')">00</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button onclick="calculateResult()" class="result">=</button>
             </div>
         </div>
         <script src="./src/main.js"></script>
